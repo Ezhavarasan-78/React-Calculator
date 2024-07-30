@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cal {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 24px;
+}
+
+input[type="button"] {
+  width: 22%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="button"]:hover {
+  background-color: #555;
+}
+
+input[type="button"]:active {
+  background-color: #777;
+}
+
+input[type="button"][value="="] {
+  background-color: #ff9500;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="button"][value="="]:hover {
+  background-color: #e68a00;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="button"][value="="]:active {
+  background-color: #cc7a00;
 }
